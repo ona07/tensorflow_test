@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PoseNet Detection</title>
+  <style>
+    #canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 9;
+    }
+    #video {
+      display: none;
+    }
+    #toggleMode {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>PoseNet Mode Toggle</h1>
+  <!-- モード切り替えボタン -->
+  <button id="toggleMode">Toggle Mode</button>
+  <video id="video" width="640" height="480" autoplay></video>
+  <canvas id="canvas" width="640" height="480"></canvas>
+  
+  <!-- 必要なライブラリの読み込み -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+  <script src="JS/main.js"></script>
+</body>
+</html>
